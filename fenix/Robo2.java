@@ -86,12 +86,16 @@ public class Rei extends TeamRobot {
             potencia = Math.min(potencia, 1.5);
         }
 
-        // velocidade da bala depende da potencia, quanto mais forte, mais lenta
-        double velocidadeBala = 20 - 3 * potencia;
-        tX() + e.getDi
-        // posicao atual do inimigo no campo
-        double inimigoX = gestance() * Math.sin(Math.toRadians(anguloAbsoluto));
-        double inimigoY = getY() + e.getDistance() * Math.cos(Math.toRadians(anguloAbsoluto));
+       
+// velocidade da bala depende da potencia, quanto mais forte, mais lenta
+double velocidadeBala = 20 - 3 * potencia;
+
+// posicao atual do inimigo no campo
+double inimigoX = getX() + e.getDistance()
+        * Math.sin(Math.toRadians(anguloAbsoluto));
+double inimigoY = getY() + e.getDistance()
+        * Math.cos(Math.toRadians(anguloAbsoluto));
+
 
         // posicao futura estimada, comeca igual a atual
         double futuroX = inimigoX;
